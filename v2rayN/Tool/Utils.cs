@@ -88,8 +88,9 @@ namespace v2rayN
                 T obj = JsonConvert.DeserializeObject<T>(strJson);
                 return obj;
             }
-            catch
+            catch(Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return JsonConvert.DeserializeObject<T>("");
             }
         }

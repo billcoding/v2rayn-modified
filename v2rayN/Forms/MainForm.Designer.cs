@@ -63,8 +63,8 @@
             this.menuExport2ServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2ShareUrl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2SubContent = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
+            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.notifyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuSysAgentMode = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,9 +101,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbSub = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsbSubSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbSubUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbQRCodeSwitch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbOptionSetting = new System.Windows.Forms.ToolStripButton();
@@ -111,22 +108,9 @@
             this.tsbReload = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCheckUpdate = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsbCheckUpdateN = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbCheckUpdateCore = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbCheckUpdatePACList = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbCheckClearPACList = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbHelp = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsbAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbV2rayWebsite = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbLanguageDef = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbLanguageZhHans = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbUpdateConfig = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
@@ -212,6 +196,7 @@
             this.menuExport2ShareUrl,
             this.menuExport2SubContent});
             this.cmsLv.Name = "cmsLv";
+            this.cmsLv.OwnerItem = this.tsbServer;
             // 
             // menuAddVmessServer
             // 
@@ -389,17 +374,17 @@
             this.menuExport2SubContent.Name = "menuExport2SubContent";
             this.menuExport2SubContent.Click += new System.EventHandler(this.menuExport2SubContent_Click);
             // 
+            // qrCodeControl
+            // 
+            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
+            this.qrCodeControl.Name = "qrCodeControl";
+            // 
             // tsbServer
             // 
             resources.ApplyResources(this.tsbServer, "tsbServer");
             this.tsbServer.DropDown = this.cmsLv;
             this.tsbServer.Image = global::v2rayN.Properties.Resources.server;
             this.tsbServer.Name = "tsbServer";
-            // 
-            // qrCodeControl
-            // 
-            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
-            this.qrCodeControl.Name = "qrCodeControl";
             // 
             // notifyMain
             // 
@@ -639,7 +624,6 @@
             this.tsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbServer,
             this.toolStripSeparator4,
-            this.tsbSub,
             this.tsbQRCodeSwitch,
             this.toolStripSeparator8,
             this.tsbOptionSetting,
@@ -648,8 +632,6 @@
             this.toolStripSeparator7,
             this.tsbCheckUpdate,
             this.toolStripSeparator10,
-            this.tsbHelp,
-            this.toolStripSeparator11,
             this.tsbClose});
             this.tsMain.Name = "tsMain";
             this.tsMain.TabStop = true;
@@ -658,27 +640,6 @@
             // 
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            // 
-            // tsbSub
-            // 
-            resources.ApplyResources(this.tsbSub, "tsbSub");
-            this.tsbSub.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSubSetting,
-            this.tsbSubUpdate});
-            this.tsbSub.Image = global::v2rayN.Properties.Resources.sub;
-            this.tsbSub.Name = "tsbSub";
-            // 
-            // tsbSubSetting
-            // 
-            resources.ApplyResources(this.tsbSubSetting, "tsbSubSetting");
-            this.tsbSubSetting.Name = "tsbSubSetting";
-            this.tsbSubSetting.Click += new System.EventHandler(this.tsbSubSetting_Click);
-            // 
-            // tsbSubUpdate
-            // 
-            resources.ApplyResources(this.tsbSubUpdate, "tsbSubUpdate");
-            this.tsbSubUpdate.Name = "tsbSubUpdate";
-            this.tsbSubUpdate.Click += new System.EventHandler(this.tsbSubUpdate_Click);
             // 
             // tsbQRCodeSwitch
             // 
@@ -721,112 +682,26 @@
             // 
             resources.ApplyResources(this.tsbCheckUpdate, "tsbCheckUpdate");
             this.tsbCheckUpdate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbUpdateConfig,
-            this.toolStripSeparator14,
-            this.tsbCheckUpdateN,
-            this.tsbCheckUpdateCore,
-            this.tsbCheckUpdatePACList,
-            this.toolStripSeparator13,
-            this.tsbCheckClearPACList});
+            this.tsbUpdateConfig});
             this.tsbCheckUpdate.Image = global::v2rayN.Properties.Resources.checkupdate;
             this.tsbCheckUpdate.Name = "tsbCheckUpdate";
-            // 
-            // tsbCheckUpdateN
-            // 
-            resources.ApplyResources(this.tsbCheckUpdateN, "tsbCheckUpdateN");
-            this.tsbCheckUpdateN.Name = "tsbCheckUpdateN";
-            this.tsbCheckUpdateN.Click += new System.EventHandler(this.tsbCheckUpdateN_Click);
-            // 
-            // tsbCheckUpdateCore
-            // 
-            resources.ApplyResources(this.tsbCheckUpdateCore, "tsbCheckUpdateCore");
-            this.tsbCheckUpdateCore.Name = "tsbCheckUpdateCore";
-            this.tsbCheckUpdateCore.Click += new System.EventHandler(this.tsbCheckUpdateCore_Click);
-            // 
-            // tsbCheckUpdatePACList
-            // 
-            resources.ApplyResources(this.tsbCheckUpdatePACList, "tsbCheckUpdatePACList");
-            this.tsbCheckUpdatePACList.Name = "tsbCheckUpdatePACList";
-            this.tsbCheckUpdatePACList.Click += new System.EventHandler(this.tsbCheckUpdatePACList_Click);
-            // 
-            // toolStripSeparator13
-            // 
-            resources.ApplyResources(this.toolStripSeparator13, "toolStripSeparator13");
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            // 
-            // tsbCheckClearPACList
-            // 
-            resources.ApplyResources(this.tsbCheckClearPACList, "tsbCheckClearPACList");
-            this.tsbCheckClearPACList.Name = "tsbCheckClearPACList";
-            this.tsbCheckClearPACList.Click += new System.EventHandler(this.tsbCheckClearPACList_Click);
-            // 
-            // toolStripSeparator10
-            // 
-            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            // 
-            // tsbHelp
-            // 
-            resources.ApplyResources(this.tsbHelp, "tsbHelp");
-            this.tsbHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbAbout,
-            this.tsbV2rayWebsite,
-            this.toolStripSeparator12,
-            this.tsbLanguageDef,
-            this.tsbLanguageZhHans});
-            this.tsbHelp.Image = global::v2rayN.Properties.Resources.help;
-            this.tsbHelp.Name = "tsbHelp";
-            // 
-            // tsbAbout
-            // 
-            resources.ApplyResources(this.tsbAbout, "tsbAbout");
-            this.tsbAbout.Name = "tsbAbout";
-            this.tsbAbout.Click += new System.EventHandler(this.tsbAbout_Click);
-            // 
-            // tsbV2rayWebsite
-            // 
-            resources.ApplyResources(this.tsbV2rayWebsite, "tsbV2rayWebsite");
-            this.tsbV2rayWebsite.Name = "tsbV2rayWebsite";
-            this.tsbV2rayWebsite.Click += new System.EventHandler(this.tsbV2rayWebsite_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            resources.ApplyResources(this.toolStripSeparator12, "toolStripSeparator12");
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            // 
-            // tsbLanguageDef
-            // 
-            resources.ApplyResources(this.tsbLanguageDef, "tsbLanguageDef");
-            this.tsbLanguageDef.Name = "tsbLanguageDef";
-            this.tsbLanguageDef.Click += new System.EventHandler(this.tsbLanguageDef_Click);
-            // 
-            // tsbLanguageZhHans
-            // 
-            resources.ApplyResources(this.tsbLanguageZhHans, "tsbLanguageZhHans");
-            this.tsbLanguageZhHans.Name = "tsbLanguageZhHans";
-            this.tsbLanguageZhHans.Click += new System.EventHandler(this.tsbLanguageZhHans_Click);
-            // 
-            // toolStripSeparator11
-            // 
-            resources.ApplyResources(this.toolStripSeparator11, "toolStripSeparator11");
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            // 
-            // tsbClose
-            // 
-            resources.ApplyResources(this.tsbClose, "tsbClose");
-            this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
-            // toolStripSeparator14
-            // 
-            resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
             // 
             // tsbUpdateConfig
             // 
             resources.ApplyResources(this.tsbUpdateConfig, "tsbUpdateConfig");
             this.tsbUpdateConfig.Name = "tsbUpdateConfig";
             this.tsbUpdateConfig.Click += new System.EventHandler(this.tsbUpdateConfig_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            // 
+            // tsbClose
+            // 
+            resources.ApplyResources(this.tsbClose, "tsbClose");
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
             // MainForm
             // 
@@ -909,30 +784,17 @@
         private QRCodeControl qrCodeControl;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripDropDownButton tsbCheckUpdate;
-        private System.Windows.Forms.ToolStripMenuItem tsbCheckUpdateN;
-        private System.Windows.Forms.ToolStripMenuItem tsbCheckUpdateCore;
-        private System.Windows.Forms.ToolStripMenuItem tsbCheckUpdatePACList;
         private System.Windows.Forms.ToolStripMenuItem menuAddServers;
         private System.Windows.Forms.ToolStripMenuItem menuExport2ShareUrl;
         private System.Windows.Forms.ToolStripMenuItem menuSpeedServer;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripDropDownButton tsbHelp;
-        private System.Windows.Forms.ToolStripMenuItem tsbAbout;
         private System.Windows.Forms.ToolStripMenuItem menuAddServers2;
         private System.ComponentModel.BackgroundWorker bgwScan;
         private System.Windows.Forms.ToolStripMenuItem menuScanScreen;
         private System.Windows.Forms.ToolStripMenuItem menuScanScreen2;
-        private System.Windows.Forms.ToolStripDropDownButton tsbSub;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem tsbSubSetting;
-        private System.Windows.Forms.ToolStripMenuItem tsbSubUpdate;
-        private System.Windows.Forms.ToolStripMenuItem tsbCheckClearPACList;
         private System.Windows.Forms.ToolStripMenuItem menuKeepPAC;
         private System.Windows.Forms.ToolStripMenuItem menuSelectAll;
         private System.Windows.Forms.ToolStripMenuItem menuExport2SubContent;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripMenuItem tsbLanguageDef;
-        private System.Windows.Forms.ToolStripMenuItem tsbLanguageZhHans;
         private System.Windows.Forms.ToolStripMenuItem menuAddSocksServer;
         private System.Windows.Forms.StatusStrip ssMain;
         private System.Windows.Forms.ToolStripStatusLabel toolSslSocksPort;
@@ -950,9 +812,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuTcpingServer;
         private System.Windows.Forms.ToolStripMenuItem menuRealPingServer;
         private System.Windows.Forms.ToolStripMenuItem menuNotEnabledHttp;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripMenuItem menuUpdateSubscriptions;
-        private System.Windows.Forms.ToolStripMenuItem tsbV2rayWebsite;
         private System.Windows.Forms.ToolStripMenuItem menuKeepNothing;
         private System.Windows.Forms.ToolStripMenuItem menuKeepPACNothing;
         private System.Windows.Forms.ToolStripMenuItem tsbTestMe;
@@ -960,7 +820,6 @@
         private System.Windows.Forms.ToolStripButton tsbQRCodeSwitch;
         private System.Windows.Forms.ToolStripMenuItem menuAddVlessServer;
         private System.Windows.Forms.ToolStripMenuItem tsbUpdateConfig;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
     }
 }
 

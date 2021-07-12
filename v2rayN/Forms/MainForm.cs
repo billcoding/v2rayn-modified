@@ -463,26 +463,15 @@ namespace v2rayN.Forms
 
         #region 功能按钮
 
+        private int prevIndex;
+
         private void lvServers_Click(object sender, EventArgs e)
         {
-            int index = -1;
-            try
+            if (lvServers.SelectedIndices.Count > 0)
             {
-                if (lvServers.SelectedIndices.Count > 0)
-                {
-                    index = lvServers.SelectedIndices[0];
-                }
+                int currentIndex = lvServers.SelectedIndices[0];
+                qrCodeControl.showQRCode(currentIndex, config);
             }
-            catch
-            {
-            }
-
-            if (index < 0)
-            {
-                return;
-            }
-
-            qrCodeControl.showQRCode(index, config);
         }
 
         private void lvServers_DoubleClick(object sender, EventArgs e)

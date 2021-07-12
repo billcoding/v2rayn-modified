@@ -331,7 +331,7 @@ namespace v2rayN.Mode
         /// <summary>
         /// 
         /// </summary>
-        public string outboundTag { get; set; }
+        public string outboundTag { get; set; } 
 
         /// <summary>
         /// 
