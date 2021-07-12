@@ -5,10 +5,7 @@ using System.Net;
 using v2rayN.Mode;
 using v2rayN.Base;
 using System.Linq;
-using System.Net.Mime;
-using System.Windows.Forms;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using v2rayN.Tool;
 
 namespace v2rayN.Handler
